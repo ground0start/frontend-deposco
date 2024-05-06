@@ -8,12 +8,16 @@ import { Observable } from 'rxjs';
 
 export class SalesDataService {
 
-  private baseUrl = 'http://localhost:8090/api/sales'; // Adjust the base URL as per your environment
+  private baseUrl = 'http://localhost:8090/api/sales'; 
 
   constructor(private http: HttpClient) { }
 
   getTotalSalesAmount(): Observable<number> {
-    return this.http.get<number>(`${this.baseUrl}/total`);
+    return this.http.get<number>(`${this.baseUrl}/total/amount`);
+  }
+
+  getTotalSalesQuantity(): Observable<number> {
+    return this.http.get<number>(`${this.baseUrl}/total/quantity`);
   }
 
   getBestSellingProductsByQuantity(): Observable<any[]> {

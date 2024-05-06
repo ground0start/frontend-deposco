@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { SalesDistributionComponent } from './sales-distribution/sales-distribution.component';
-import { SalesTrendsComponent } from './sales-trends/sales-trends.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SalesDashboardComponent } from './sales-dashboard/sales-dashboard.component';
 
 export const routes: Routes = [
-  { path: 'sales-distribution', component: SalesDistributionComponent },
-  { path: 'sales-trends', component: SalesTrendsComponent },
-  { path: '', redirectTo: '/sales-trends', pathMatch: 'full' }
+  { path: 'main', component: SalesDashboardComponent },
+  { path: '', redirectTo: '/main', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
