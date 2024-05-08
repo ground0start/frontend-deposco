@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { SalesDataService } from '../sales-data.service';
-import { Color, ScaleType } from '@swimlane/ngx-charts';
+import { NgxChartsModule, Color, ScaleType } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-sales-dashboard',
@@ -16,7 +15,6 @@ export class SalesDashboardComponent implements OnInit {
   multi: any[] = []; // Data for trends
   view: [number, number] = [1500, 800]; // Chart dimensions
   legend: boolean = true;
-  showLabels: boolean = true;
   xAxis: boolean = true;
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
